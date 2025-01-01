@@ -7,89 +7,111 @@
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/responsive.css">
-   <!-- Подключение шрифтов -->
    <link rel="preload" href="fonts/roboto/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 <body>
-   <header>
-      <div class="container">
-         <div class="header-icons">
-            <a href="#">
-               <img src="images/icons/instagram.svg" alt="Instagram">
-            </a>
-         </div>
-         <nav class="header-nav">
-            <ul>
-               <li><a href="index.html">Главная</a></li>
-               <li><a href="our-team.html">Мастера</a></li>
-               <li><a href="cosmetic.html">Косметика</a></li>
-            </ul>
-         </nav>
-         <div class="header-logo">
-            <a href="#">
-               <img src="images/logo-little.svg" alt="Логотип сайта">
-            </a>
-         </div>
-         <nav class="header-nav">
-            <ul>
-               <li><a href="price.html">Акции</a></li>
-               <li><a href="feedback.html">Отзывы</a></li>
-               <li><a href="contact.html">Контакты</a></li>
-            </ul>
-         </nav>
-         <div class="header-icons">
-            <a href="#">
-               <img src="images/icons/burger.svg" alt="Burger">
-            </a>
-         </div>
-      </div>
+   <header class="header">
+   	<div class="logo">Guldana</div>
+   	<nav class="nav">
+   	   <ul>
+   	      <li><a href="#about">О нас</a></li>
+   	      <li><a href="#services">Услуги</a></li>
+   	      <li><a href="#masters">Мастера</a></li>
+   	      <li><a href="#reviews">Отзывы</a></li>
+   	      <li><a href="#contacts">Контакты</a></li>
+   	   </ul>
+   	</nav>
    </header>
 
-   <!-- Главный контент -->
-   <main>
-      <!-- Секция баннера -->
-      <section class="hero">
-         <div class="container">
-            <h1>Добро пожаловать на наш сайт</h1>
-            <p>Ваш текст с описанием, зачем этот сайт нужен</p>
-            <a href="#services" class="btn">Узнать больше</a>
-         </div>
-      </section>
+   <section id="about" class="about">
+   	<h1>Добро пожаловать в Beauty Salon Guldana</h1>
+   	<p>Мы делаем ваш мир прекраснее!</p>
+   </section>
 
-      <!-- Секция услуг -->
-      <section id="services" class="services">
-         <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="services-grid">
-               <div class="service">
-                  <h3>Услуга 1</h3>
-                  <p>Описание первой услуги.</p>
-               </div>
-               <div class="service">
-                  <h3>Услуга 2</h3>
-                  <p>Описание второй услуги.</p>
-               </div>
-               <div class="service">
-                  <h3>Услуга 3</h3>
-                  <p>Описание третьей услуги.</p>
-               </div>
-            </div>
-         </div>
-      </section>
-   </main>
+   <section id="services" class="services">
+   	<h2>Наши услуги</h2>
+   	<div class="service-list">
+   		<div class="service-item">Маникюр и педикюр</div>
+   		<div class="service-item">Укладка и стрижка</div>
+   		<div class="service-item">Макияж для особых событий</div>
+   	</div>
+   </section>
 
-   <!-- Подвал сайта -->
-   <footer>
-      <div class="container">
-         <p>© 2024 Название сайта. Все права защищены.</p>
-         <ul class="footer-links">
-            <li><a href="privacy.html">Политика конфиденциальности</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-         </ul>
+   <section id="masters" class="masters">
+   <h2>Наши мастера</h2>
+   <div class="master-list">
+      <div class="master-item">
+         <img src="pictures/master1.jpg" alt="Master 1">
+         <p>Анна Иванова</p>
       </div>
+      <div class="master-item">
+         <img src="pictures/master2.jpg" alt="Master 2">
+         <p>Екатерина Смирнова</p>
+      </div>
+      <div class="master-item">
+         <img src="pictures/master3.jpg" alt="Master 3">
+         <p>Мария Кузнецова</p>
+      </div>
+      <div class="master-item">
+         <img src="pictures/master4.jpg" alt="Master 4">
+         <p>Ольга Попова</p>
+      </div>
+      <div class="master-item">
+         <img src="pictures/master5.jpg" alt="Master 5">
+         <p>Ирина Соколова</p>
+      </div>
+   </div>
+   </section>
+
+   <section id="reviews" class="reviews">
+   	<h2>Отзывы</h2>
+   	<div class="review-list">
+      		<div class="review-item">
+      	   <p>"Отличный сервис! Очень довольна результатом!"</p>
+      	   <span>Оценка: 5/5</span>
+      	</div>
+      	<div class="review-item">
+      	   <p>"Профессиональные мастера, рекомендую."</p>
+      	   <span>Оценка: 4.5/5</span>
+      	</div>
+      	<div class="review-item">
+         	<p>"Спасибо за прекрасный макияж на свадьбу!"</p>
+         	<span>Оценка: 5/5</span>
+      	</div>
+   	</div>
+   	<form class="review-form">
+      	<textarea placeholder="Ваш отзыв" required></textarea>
+      	<input type="number" min="1" max="5" placeholder="Оценка (1-5)" required>
+      	<button type="submit">Отправить</button>
+   	</form>
+   </section>
+
+   <section id="contacts" class="contacts">
+		<h2>Контакты</h2>
+		<p>Телефон: +7 (777) 123-45-67</p>
+		<p>Адрес: г. Алмата, ул. Красоты, 10</p>
+		<button class="support-btn">Обратиться в поддержку</button>
+		<ul class="faq">
+			<li>Как записаться?</li>
+			<li>Какие услуги вы предоставляете?</li>
+			<li>Какой график работы?</li>
+		</ul>
+   </section>
+
+   <section id="auth" class="auth">
+		<h2>Войти или зарегистрироваться</h2>
+		<form class="auth-form">
+			<input type="text" placeholder="Номер телефона" required>
+			<input type="password" placeholder="Пароль" required>
+			<button type="submit">Войти</button>
+			<a href="#">Забыли пароль?</a>
+		</form>
+   </section>
+
+   <footer class="footer">
+   	<p>© 2025 Beauty Salon Guldana</p>
    </footer>
 
-   <!-- Подключение скриптов -->
    <script src="js/main.js"></script>
 </body>
 </html>
