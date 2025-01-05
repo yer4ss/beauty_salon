@@ -46,6 +46,44 @@ header nav a:hover {
    border-radius: 5px;
 }
 
+.nav {
+   width: 100%;
+   background-color: #f5f5f5; /* Фон навигации */
+   padding: 20px 0;
+}
+
+.nav ul {
+   display: flex; /* Включаем Flexbox для списка */
+   justify-content: space-evenly; /* Равномерное распределение пунктов */
+   align-items: center; /* Центрирование по вертикали */
+   list-style: none; /* Убираем маркеры списка */
+   margin: 0;
+   padding: 0;
+}
+
+.nav li {
+   margin: 0;
+}
+
+.nav a {
+   text-decoration: none; /* Убираем подчеркивание текста */
+   color: #333; /* Цвет текста */
+   font-size: 16px;
+   font-weight: bold;
+   padding: 10px 20px; /* Добавляем отступы для удобства */
+   transition: color 0.3s ease, background-color 0.3s ease; /* Плавная анимация */
+   border-radius: 5px;
+}
+
+.nav a:hover {
+   color: #fff; /* Цвет текста при наведении */
+   background-color: #000; /* Фон при наведении */
+   border-radius: 5px; /* Сглаживание углов */
+}
+
+
+
+
  /* Section Styles */
 section {
    padding: 4rem 2rem;
