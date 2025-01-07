@@ -7,164 +7,188 @@
 
 body {
    font-family: 'Arial', sans-serif;
-   background-color: #f5f5f5;
-   color: #333;
+   background-color: #121212;
+   color: #fff;
    line-height: 1.6;
-   overflow-x: hidden;
 }
 
-/* Header Styles */
+/* Header Section */
 header {
    background-color: #000;
-   color: #fff;
    padding: 1rem 2rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 100;
 }
 
-header h1 {
-   font-size: 1.8rem;
-   letter-spacing: 1px;
+header .logo {
+   display: flex;
+   align-items: center;
+}
+
+header .logo img {
+   width: 50px;
+   height: 50px;
 }
 
 header nav {
    display: flex;
-   gap: 1rem;
+   gap: 2rem;
 }
 
 header nav a {
    text-decoration: none;
    color: #fff;
-   font-size: 1rem;
+   font-size: 1.2rem;
    padding: 0.5rem 1rem;
-   transition: background-color 0.3s;
+   transition: color 0.3s;
 }
 
 header nav a:hover {
-   background-color: #555;
-   border-radius: 5px;
+   color: #bfa16c;
 }
 
-.nav {
-   width: 100%;
-   background-color: #f5f5f5; /* Фон навигации */
-   padding: 20px 0;
+/* Hero Section */
+.hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 100vh;
+   background: url('gray-placeholder.png') no-repeat center center/cover;
+   position: relative;
 }
 
-.nav ul {
-   display: flex; /* Включаем Flexbox для списка */
-   justify-content: space-evenly; /* Равномерное распределение пунктов */
-   align-items: center; /* Центрирование по вертикали */
-   list-style: none; /* Убираем маркеры списка */
-   margin: 0;
-   padding: 0;
-}
-
-.nav li {
-   margin: 0;
-}
-
-.nav a {
-   text-decoration: none; /* Убираем подчеркивание текста */
-   color: #333; /* Цвет текста */
-   font-size: 16px;
+.hero h1 {
+   font-size: 3rem;
    font-weight: bold;
-   padding: 10px 20px; /* Добавляем отступы для удобства */
-   transition: color 0.3s ease, background-color 0.3s ease; /* Плавная анимация */
+   margin-bottom: 1rem;
+}
+
+.hero p {
+   font-size: 1.2rem;
+   margin-bottom: 2rem;
+   color: #ccc;
+}
+
+.hero button {
+   padding: 0.8rem 2rem;
+   font-size: 1rem;
+   border: none;
+   background-color: #bfa16c;
+   color: #000;
    border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
 }
 
-.nav a:hover {
-   color: #fff; /* Цвет текста при наведении */
-   background-color: #000; /* Фон при наведении */
-   border-radius: 5px; /* Сглаживание углов */
+.hero button:hover {
+   background-color: #d9b87a;
 }
 
-
-
-
- /* Section Styles */
-section {
+/* Services Section */
+.services {
    padding: 4rem 2rem;
    text-align: center;
 }
 
-section h2 {
+.services h2 {
    font-size: 2rem;
-   margin-bottom: 1rem;
-   color: #222;
+   margin-bottom: 2rem;
+   color: #bfa16c;
 }
 
-section p {
-   max-width: 600px;
-   margin: 0 auto;
-   color: #555;
-}
-
- /* Button Styles */
-button {
-   background-color: #007BFF;
-   color: #fff;
-   padding: 0.8rem 1.5rem;
-   border: none;
-   border-radius: 5px;
-   font-size: 1rem;
-   cursor: pointer;
-   transition: background-color 0.3s ease;
-}
-
-button:hover {
-   background-color: #0056b3;
-}
-
- /* Card Styles */
-.card {
-   background-color: #fff;
-   border-radius: 10px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-   padding: 2rem;
-   margin: 1rem;
-   text-align: left;
-}
-
-.card img {
-   max-width: 100%;
-   border-radius: 10px;
-   margin-bottom: 1rem;
-}
-
-.card h3 {
-   font-size: 1.5rem;
-   margin-bottom: 0.5rem;
-}
-
-.card p {
-   color: #666;
-}
-
- /* Grid Layout for Cards */
-.grid {
+.services .grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
    gap: 2rem;
-   margin-top: 2rem;
 }
 
- /* Footer Styles */
-footer {
+.services .card {
    background-color: #222;
+   padding: 1.5rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.services .card img {
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 5px;
+   margin-bottom: 1rem;
+}
+
+.services .card h3 {
+   font-size: 1.5rem;
+   margin-bottom: 1rem;
+   color: #fff;
+}
+
+.services .card p {
+   font-size: 1rem;
    color: #ccc;
+}
+
+/* Gallery Section */
+.gallery {
+   padding: 4rem 2rem;
+}
+
+.gallery h2 {
+   font-size: 2rem;
    text-align: center;
-   padding: 1rem;
-   font-size: 0.9rem;
+   margin-bottom: 2rem;
+   color: #bfa16c;
 }
 
-footer a {
-   color: #007BFF;
-   text-decoration: none;
+.gallery .grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1.5rem;
 }
 
-footer a:hover {
-   text-decoration: underline;
+.gallery .grid img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 5px;
+   background-color: #555;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+/* Footer Section */
+footer {
+   background-color: #000;
+   padding: 2rem;
+   text-align: center;
+   color: #ccc;
+}
+
+footer .social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+footer .social-icons a {
+   color: #fff;
+   font-size: 1.5rem;
+   transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+   color: #bfa16c;
+}
+
+footer p {
+   font-size: 1rem;
 }
